@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-    resources :categories
-    resources :users
-    resources :saved_gems
-    resources :city_gems
-    resources :comments
-    resources :likes
+    resources :category
+    resources :user
+    resources :saved_gem
+    resources :city_gem
+    resources :comment
+    resources :like
 
     root 'welcome#index'
 
