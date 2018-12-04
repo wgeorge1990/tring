@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
     resources :categories
 
     resources :users do
@@ -9,5 +10,7 @@ Rails.application.routes.draw do
       resources :comments
       resources :likes
     end
-    
+
+
+
 end
