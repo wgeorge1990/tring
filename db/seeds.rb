@@ -1,4 +1,3 @@
-
 categories = ["DayTime Events", "Bites", "Clothing", "Art", "Night Life", "Alternative Ideas"]
 
 categories.each do |category|
@@ -10,8 +9,6 @@ users = [{first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah",
 users.each do |user|
   User.create(user)
 end
-
-#CityGem
 
 stone_mountain_trail = CityGem.create(name: "Stone Mountain Trails", description: "Stone Mountain Park features 15 miles of hiking and walking trails, including the 1 mile trail to the top of the mountain", address: "1000 Robert E Lee Blvd, Stone Mountain, GA 30083", category_id: 1 )
 victory_creek_fall = CityGem.create(name: "Vickery Creek Falls Roswell Mill", description: "Scenic place featuring a historic mill, covered bridge & man-made waterfall, plus hiking trails.", address: "95 Mill St, Roswell, GA 30075", category_id: 1 )
