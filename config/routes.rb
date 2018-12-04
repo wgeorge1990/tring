@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
-    resources :category
+    resources :categories
     resources :user
-    resources :saved_gem
-    resources :city_gem
-    resources :comment
-    resources :like
+    resources :saved_gems
+    resources :city_gems
+    resources :comments
+    resources :likes
 
-    root 'welcome#index'
+    root 'login#new'
+
+    get '/login', to: 'login#new'
+    post '/login', to: 'login#create'
 
 end
