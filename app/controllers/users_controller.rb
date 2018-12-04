@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   def index
     @users = User.all
@@ -16,7 +16,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.valid?
       @user.save
-      redirect_to user_path(@user)
+      redirect_to users_path(@user)
     else
       render :new
     end
@@ -29,7 +29,7 @@ class UserController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to user_path(@user)
+      redirect_to users_path(@user)
     else
       render :edit
     end
