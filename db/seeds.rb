@@ -51,3 +51,13 @@ abbadabba = CityGem.create(name: "Abbadabba", description: "Atlanta's Premier so
 heet_atl = CityGem.create(name: "Heet ATL", description: "Compact, modern boutique for new & refurbished limited-edition sneakers, also buying on consignment.", address: "1149 Euclid Ave NE, Atlanta, GA 30307", category_id: 3 )
 god_is_dope = CityGem.create(name: "God is Dope", description: "Playful boutique selling its own brand of streetwear & accessories with the 'God Is Dope' message.", address: "451 Edgewood Ave SE, Atlanta, GA 30312", category_id: 3 )
 variety_plahouse = CityGem.create(name: "Variety Playhouse", description: "Converted movie theater now serves as an intimate concert hall featuring a variety of popular acts.", address: "1099 Euclid Ave NE, Atlanta, GA 30307", category_id: 4 )
+
+
+## Category
+
+daytime_events = Category.create(name: "DayTime Events")
+bites = Category.create(name: "Bites")
+clothing = Category.create(name: "Clothing")
+art = Category.create(name: "Art")
+night_life = Category.create(name: "Night Life")
+alternative_ideas = Category.create(name: "Alternative Ideas")
