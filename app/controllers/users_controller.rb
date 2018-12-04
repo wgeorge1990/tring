@@ -14,10 +14,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.valid?
-      @user.save
+    if @user.save
       redirect_to users_path(@user)
     else
+      flash[:error] = "We couldn't save your user."
       render :new
     end
   end
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     end
 
   def user_params
-    params.require(:user).permit(:name, :email, :img_url)
+    params.require(:user).permit(:name, :email, :username, :img_url)
   end
 
 end

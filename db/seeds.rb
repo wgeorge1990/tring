@@ -4,7 +4,7 @@ categories.each do |category|
   Category.create(name: category)
 end
 
-users = [{first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com", password: "kwam"}, {first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com", password: "will"}, {first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com", password: "paris"} ]
+users = [{first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com", password: "kwam", img_url: "drake.jpg"}, {first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com", password: "will", img_url: "arnie.jpg"}, {first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com", password: "paris", img_url: "ellen.jpg"} ]
 
 users.each do |user|
   User.create(user)
