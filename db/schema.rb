@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2018_12_03_200603) do
 
   create_table "categories", force: :cascade do |t|
-    t.integer "city_gem_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,7 +51,9 @@ ActiveRecord::Schema.define(version: 2018_12_03_200603) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "user_name"
     t.string "email"
     t.string "img_url"
     t.datetime "created_at", null: false
