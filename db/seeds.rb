@@ -1,31 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+categories = ["DayTime Events", "Bites", "Clothing", "Art", "Night Life", "Alternative Ideas"]
 
-## User
-kwam = User.create(first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com", img_url: "drake.jpg")
-will = User.create(first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com", img_url: "arnie.jpg")
-paris = User.create(first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com", img_url: "ellen.jpg")
+categories.each do |category|
+  Category.create(name: category)
+end
 
- ## Category
+users = [{first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com"}, {first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com"}, {first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com"} ]
 
-daytime_events = Category.create(name: "DayTime Events")
-bites = Category.create(name: "Bites")
-clothing = Category.create(name: "Clothing")
-art = Category.create(name: "Art")
-night_life = Category.create(name: "Night Life")
-alternative_ideas = Category.create(name: "Alternative Ideas")
-
-
-## CityGem
+users.each do |user|
+  User.create(user)
+end
 
 stone_mountain_trail = CityGem.create(name: "Stone Mountain Trails", description: "Stone Mountain Park features 15 miles of hiking and walking trails, including the 1 mile trail to the top of the mountain", address: "1000 Robert E Lee Blvd, Stone Mountain, GA 30083", category_id: 1 )
 victory_creek_fall = CityGem.create(name: "Vickery Creek Falls Roswell Mill", description: "Scenic place featuring a historic mill, covered bridge & man-made waterfall, plus hiking trails.", address: "95 Mill St, Roswell, GA 30075", category_id: 1 )
-roswell_mill_waterfallv= CityGem.create(name: "Roswell Mill Waterfall", description: "Man-Made Waterfall", address: "1 Mill St, Roswell, GA 30075", category_id: 1 )
+roswell_mill_waterfalls= CityGem.create(name: "Roswell Mill Waterfall", description: "Man-Made Waterfall", address: "1 Mill St, Roswell, GA 30075", category_id: 1 )
 charleston_bike_trail = CityGem.create(name: "Charleston Park Mountain Bike Trail ", description: "This public space, one of many on Lake Lanier, has boat ramps, docks & picnic tables with grills.", address: "5850 Charleston Park Rd, Cumming, GA 30041", category_id: 1 )
 jones_bridge_park = CityGem.create(name: "Jones Bridge Park Trail", description: "Tranquil setting featuring a playground, sand volleyball court & river with swim & fishing areas.", address: "4901 E Jones Bridge Rd, Peachtree Corners, GA 30092", category_id: 1 )
 lullwater_preserve = CityGem.create(name: "Lullwater Preserve", description: "Run or walk the scenic trails at Lullwater Park, following the banks of a serene lake and crossing a span bridge to explore the ruins of a 1920s powerhouse.", address: "1463 Clifton Rd, Decatur, GA 30033", category_id: 1 )
