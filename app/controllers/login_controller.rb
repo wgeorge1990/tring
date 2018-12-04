@@ -6,7 +6,8 @@ class LoginController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.password == params[:password]
       session[:user_id] = @user.id
-      redirect_to :root
+      # redirect_to :root
+      redirect_to user_path(@user)
     else
       flash[:notice] = "Please try again or create a user, what you entered was not valid."
       render :new
