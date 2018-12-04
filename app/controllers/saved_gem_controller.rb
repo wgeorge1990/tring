@@ -1,2 +1,0 @@
-class SavedGemController < ApplicationController
-end

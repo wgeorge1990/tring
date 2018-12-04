@@ -1,2 +1,0 @@
-class CityGemController < ApplicationController
-end
