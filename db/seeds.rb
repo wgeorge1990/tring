@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ## User
-kwam = User.create(first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com")
-will = User.create(first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com")
-paris = User.create(first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com"
+kwam = User.create(first_name: "Kwamena", last_name: "Amissah", user_name: "kwamamissah", email: "kwamamissah@yahoo.com", img_url: "drake.jpg")
+will = User.create(first_name: "William", last_name: "George", user_name: "wgeorge1990", email: "williameverettgeorge@gmail.com", img_url: "arnie.jpg")
+paris = User.create(first_name: "Paris", last_name: "Tuzun", user_name: "paristuzun", email: "paristuzun@gmail.com", img_url: "ellen.jpg")
 
  ## Category
 
@@ -18,9 +18,9 @@ bites = Category.create(name: "Bites")
 clothing = Category.create(name: "Clothing")
 art = Category.create(name: "Art")
 night_life = Category.create(name: "Night Life")
-alternative_ideas = Category.create(name: "Alternative Ideas") 
- 
-  
+alternative_ideas = Category.create(name: "Alternative Ideas")
+
+
 ## CityGem
 
 stone_mountain_trail = CityGem.create(name: "Stone Mountain Trails", description: "Stone Mountain Park features 15 miles of hiking and walking trails, including the 1 mile trail to the top of the mountain", address: "1000 Robert E Lee Blvd, Stone Mountain, GA 30083", category_id: 1 )
