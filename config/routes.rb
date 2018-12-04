@@ -7,6 +7,9 @@ Rails.application.routes.draw do
     resources :comment
     resources :like
 
-    root 'welcome#index'
+    root 'login#new'
+
+    get '/login', to: 'login#new'
+    post '/login', to: 'login#create'
 
 end
