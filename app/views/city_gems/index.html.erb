@@ -1,0 +1,7 @@
+<h1> City Gems </h1>
+
+<ul>
+<% @city_gems.each do |city_gem| %>
+<li><%= link_to city_gem.name, city_gems_path(city_gem) %></li>
+<% end %>
+</ul>
