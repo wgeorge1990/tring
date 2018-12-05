@@ -10,7 +10,7 @@ users.each do |user|
   User.create(user)
 end
 
-stone_mountain_trail = CityGem.create(name: "Stone Mountain Trails", description: "Stone Mountain Park features 15 miles of hiking and walking trails, including the 1 mile trail to the top of the mountain", address: "1000 Robert E Lee Blvd, Stone Mountain, GA 30083", category_id: 1 )
+stone_mountain_trail = CityGem.create(name: "Stone Mountain Trails", description: "Stone Mountain Park features 15 miles of hiking and walking trails, including the 1 mile trail to the top of the mountain", address: "1000 Robert E Lee Blvd, Stone Mountain, GA 30083", category_id: 1, img_url: "https://www.atlantatrails.com/wp-content/uploads/2017/05/stone-mountain-georgia-hiking-1024x683@2x.jpg" )
 victory_creek_fall = CityGem.create(name: "Vickery Creek Falls Roswell Mill", description: "Scenic place featuring a historic mill, covered bridge & man-made waterfall, plus hiking trails.", address: "95 Mill St, Roswell, GA 30075", category_id: 1 )
 roswell_mill_waterfalls= CityGem.create(name: "Roswell Mill Waterfall", description: "Man-Made Waterfall", address: "1 Mill St, Roswell, GA 30075", category_id: 1 )
 charleston_bike_trail = CityGem.create(name: "Charleston Park Mountain Bike Trail ", description: "This public space, one of many on Lake Lanier, has boat ramps, docks & picnic tables with grills.", address: "5850 Charleston Park Rd, Cumming, GA 30041", category_id: 1 )
