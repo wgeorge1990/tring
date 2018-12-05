@@ -2,6 +2,7 @@
 
 <ul>
 <% @city_gems.each do |city_gem| %>
-<li><%= link_to city_gem.name, city_gems_path(city_gem) %></li>
+<li><%= link_to city_gem.name, city_gem_path(city_gem) %></li>
+<p><%= city_gem.likes.count %> <%= (city_gem.likes.count) == 1 ? 'Like' : 'Likes'%></p>
 <% end %>
 </ul>

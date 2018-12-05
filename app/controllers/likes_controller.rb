@@ -1,25 +1,45 @@
 class LikesController < ApplicationController
+  before_action :find_city_gem
+  before_action :find_like, only: [:destroy]
 
-  def create
-    @user = current_user.id
-    @city_gem = params[:city_gem_id]
-    likes = {user_id: @user, city_gem_id: @city_gem}
-    @like = Like.new(likes)
+   def index
+     redirect_to city_gem_path(@city_gem)
+   end
 
-    @like.save!
-    if @like.save
-      redirect_to user_path(@user)
-    else
-      redirect_to city_gem_path
+    def create
+      if already_liked?
+        flash[:notice] = "You can't like more than once"
+      else
+        @city_gem.likes.create(user_id: current_user)
+      end
+        redirect_to city_gem_path(@city_gem)
     end
-  end
+
+    def destroy
+      if !(already_liked?)
+        flash[:notice] = "Cannot unlike"
+    else
+        @like = Like.find(params[:id])
+        @like.destroy
+    end
+        redirect_to city_gem_path(@city_gem)
+    end
+
+    def find_like
+      @city_gem = @city_gem.likes.find(params[:id])
+    end
 
 
+    private
 
-  def destroy
+    def find_city_gem
+      @city_gem = CityGem.find(params[:city_gem_id])
+    end
 
-
-  end
+    def already_liked?
+      Like.where(user_id: current_user, city_gem_id:
+      params[:city_gem_id]).exists?
+    end
 
 
 end

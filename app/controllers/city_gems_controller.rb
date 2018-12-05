@@ -13,7 +13,7 @@ class CityGemsController < ApplicationController
   end
 
   def create
-    @city_gem = CityGem.new(citygem_params)
+    @city_gem = CityGem.new(city_gem_params)
     if @city_gem.save
       redirect_to city_gems_path(@citygem)
     else
