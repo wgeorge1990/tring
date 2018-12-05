@@ -4,6 +4,6 @@
 
 <p>Description: <%= @city_gem.description %></p>
 <h3>Category: <%= @city_gem.category.name %></h3>
-<h4>Likes: <%= @city_gem.likes %></h4>
 <h4>Address: <%= @city_gem.address%></h4>
-<h4>Like: <%= link_to "like", city_gems_path(@city_gem), method: :post %></h4>
+<%= button_to 'Like', city_gem_likes_path(@city_gem), method: :post%>
+<p><%= @city_gem.likes.count %> <%= (@city_gem.likes.count) == 1 ? 'Like' : 'Likes'%></p>

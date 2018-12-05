@@ -6,13 +6,9 @@ Rails.application.routes.draw do
     resources :comments
     resources :city_gems
 
-
-
-    resources :users do
       resources :city_gems do
         resources :likes
       end
-    end
 
 
     root 'login#new'
