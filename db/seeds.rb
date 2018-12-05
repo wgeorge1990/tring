@@ -6,6 +6,9 @@ end
 
 users = [{first_name: "Kwamena", last_name: "Amissah", username: "kwamamissah", email: "kwamamissah@yahoo.com", password: "kwam", img_url: "drake.jpg"}, {first_name: "William", last_name: "George", username: "wgeorge1990", email: "williameverettgeorge@gmail.com", password: "will", img_url: "arnie.jpg"}, {first_name: "Paris", last_name: "Tuzun", username: "paristuzun", email: "paristuzun@gmail.com", password: "paris", img_url: "ellen.jpg"} ]
 
+
+
+
 users.each do |user|
   User.create(user)
 end
@@ -84,3 +87,9 @@ high_museum= CityGem.create(name: "High Museum", description: "The High Museum o
 the_loft= CityGem.create(name: "The Loft", description: "Apart of Center Stage three separate venues located in Atlanta, Georgia.", address: "1374 West Peachtree Street Northwest, Atlanta, GA 30309", category_id: 4 )
 eddies_attick = CityGem.create(name: "Eddie’s Attic", description: "Eddie's Attic is a music club in Decatur, Georgia. Founded in 1992 by Eddie Owen, it is a venue for both local musical talent and musicians of some acclaim who often got their start in the Atlanta area.", address: "1374 West Peachtree Street Northwest, Atlanta, GA 30309", category_id: 4 )
 center_stage = CityGem.create(name: "Center Stage", description: "Center Stage is a mid-sized concert complex comprising three separate venues located in Atlanta, Georgia.", address: "1374 West Peachtree Street Northwest, Atlanta, GA 30309", category_id: 4 )
+
+comments =[ {body: "This is a great little coffee shop. Cappuccino was smooth with just enough milk to not over power the coffee. In the three times I stopped in, two of the cappuccino tasted the same and the third was a little to hot with a little to much milk... but overall I would go here again.", user_id: 2, city_gem_id: 13 }, {body: "Charleston Park is a hidden little mountain biking fast track trail located on the edge of lake Lanier. Only well known by older locals makeing it a great place to ride when your looking for less of a crowd, downhill speed, and a wonderful day of dusty fast track.", user_id: 2, city_gem_id: 4}]
+
+comments.each do |comment|
+  Comment.create(comment)
+end
