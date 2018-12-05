@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
 
     resources :categories
-    resources :users
     resources :saved_gems
-    resources :city_gems
+    resources :users
     resources :comments
-    resources :likes
-    
+    resources :city_gems
+
+
+
+    resources :users do
+      resources :city_gems do
+        resources :likes
+      end
+    end
+
+
     root 'login#new'
 
     get '/login', to: 'login#new'
