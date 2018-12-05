@@ -5,5 +5,12 @@
 <p>Description: <%= @city_gem.description %></p>
 <h3>Category: <%= @city_gem.category.name %></h3>
 <h4>Address: <%= @city_gem.address%></h4>
-<%= button_to 'Like', city_gem_likes_path(@city_gem), method: :post%>
+
+<% pre_like = @city_gem.likes.find { |like| like.user_id == current_user} %>
+<% if pre_like %>
+  <%= button_to 'Unlike', city_gem_like_path(@city_gem, pre_like), method: :delete %>
+<% else %>
+  <%= button_to 'Like', city_gem_likes_path(@city_gem), method: :post %>
+<% end %>
+
 <p><%= @city_gem.likes.count %> <%= (@city_gem.likes.count) == 1 ? 'Like' : 'Likes'%></p>
