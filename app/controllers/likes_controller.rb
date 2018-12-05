@@ -19,14 +19,13 @@ class LikesController < ApplicationController
       if !(already_liked?)
         flash[:notice] = "Cannot unlike"
     else
-        @like = Like.find(params[:id])
         @like.destroy
     end
         redirect_to city_gem_path(@city_gem)
     end
 
     def find_like
-      @city_gem = @city_gem.likes.find(params[:id])
+      @like = @city_gem.likes.find(params[:id])
     end
 
 
