@@ -1,5 +1,9 @@
 <h1> <%= @city_gem.name %></h1>
+
+<!-- add image -->
+<%# <img src="<%= @city_gem.img_url %>" /> %>
+
 <p>Description: <%= @city_gem.description %></p>
-<h3>Category: <%= @city_gem.category_id %></h3>
+<h3>Category: <%= @city_gem.category.name %></h3>
 <h4>Likes: <%= @city_gem.likes %></h4>
 <h4>Address: <%= @city_gem.address%></h4>

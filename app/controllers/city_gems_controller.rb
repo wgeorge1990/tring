@@ -5,39 +5,39 @@ class CityGemsController < ApplicationController
   end
 
   def new
-    @city_gem = Citygem.new
+    @city_gem = CityGem.new
   end
 
   def show
-    @city_gem = Citygem.find(params[:id])
+    @city_gem = CityGem.find(params[:id])
   end
 
   def create
-    @city_gem = Citygem.new(citygem_params)
+    @city_gem = CityGem.new(citygem_params)
     if @city_gem.save
-      redirect_to citygems_path(@citygem)
+      redirect_to city_gems_path(@citygem)
     else
       flash[:error] = "We couldn't save your citygem."
       render :new
     end
   end
 
-  def edit
-    @city_gem = Citygem.find(params[:id])
-  end
-
-  def update
-    @city_gem = Citygem.find(params[:id])
-    if @city_gem.update(citygem_params)
-      redirect_to citygems_path(@citygem)
-    else
-      render :edit
-    end
-  end
+  # def edit
+  #   @city_gem = CityGem.find(params[:id])
+  # end
+  #
+  # def update
+  #   @city_gem = CityGem.find(params[:id])
+  #   if @city_gem.update(citygem_params)
+  #     redirect_to city_gems_path(@city_gem)
+  #   else
+  #     render :edit
+  #   end
+  # end
 
   private
-    def set_citygem
-    @city_gem = Citygem.find(params[:id])
+    def set_city_gem
+    @city_gem = CityGem.find(params[:id])
     end
 
   def city_gem_params
