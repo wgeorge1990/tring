@@ -9,7 +9,8 @@ class LoginController < ApplicationController
       # redirect_to :root
       redirect_to user_path(@user)
     else
-      flash[:notice] = "Please try again or create a user, what you entered was not valid."
+      flash[:error] = "Please try again or create a user, what you entered was not valid."
+      flash.discard(:error)
       render :new
     end
   end

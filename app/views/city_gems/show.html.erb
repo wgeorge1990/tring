@@ -7,8 +7,11 @@
 <h4>Address: <%= @city_gem.address%></h4>
 
 <h3>Comments</h3>
+<%= @city_gem.comments.size %>
 <%= render partial: 'comments/form' %>
 <%= render partial: 'city_gems/comment', collection: @city_gem.comments.reverse %>
+
+
 
 <% pre_like = @city_gem.likes.find { |like| like.user_id == current_user} %>
 <% if pre_like %>
