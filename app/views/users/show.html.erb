@@ -1,11 +1,19 @@
+<div class="container">
 <img src="/profile-pics/<%=@user.img_url%>"><br>
+<p><h3> Name: <%= @user.name %></h3>
 
-<h1> Name:<%= @user.name %></h1>
-<h2> Email:<%= @user.email %></h2>
+<p><h3> Email: <%= @user.email %></h3>
 
-Comments:<% @user.comments.each do |comment| %>
+<h4>Comments:</h4><h5><% @user.comments.each do |comment| %>
 <p><%= comment.body %></p>
 <% end %>
-
+</h5>
 
 <%= link_to("Edit profile", edit_user_path(@user)) %><br>
+
+<h4>Liked Gems:</h4><h5><% @user.likes.each do |liked| %>
+<p><%= link_to liked.city_gem.name, city_gem_path(liked.city_gem) %></p>
+<p><img src="<%= liked.city_gem.img_url %>" </p>
+<% end %>
+</h5>
+</div>
