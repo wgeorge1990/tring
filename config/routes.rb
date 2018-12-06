@@ -3,7 +3,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :saved_gems
     resources :users
-    resources :city_gems
 
       resources :city_gems do
         resources :likes
