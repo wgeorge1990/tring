@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body class="landing-page">
 
   <div class="container">
    <div class="box-header">
@@ -33,9 +33,10 @@
       <%= password_field_tag("password") %>
     </div><!-- form-group -->
       <%= submit_tag("Login") %>
-      <div class="submit">
-        <%= link_to ("Create Account"), new_user_path %>
-      </div>
+
+        <%= link_to ("Create Account"), new_user_path, {:class =>
+"submit"} %>
+
 
       <% end %>
 
