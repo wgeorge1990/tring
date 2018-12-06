@@ -1,9 +1,11 @@
+<img src="/profile-pics/<%=@user.img_url%>"><br>
+
 <h1> Name:<%= @user.name %></h1>
 <h2> Email:<%= @user.email %></h2>
-<img src="/profile-pics/<%=@user.img_url%>"><br>
 
 Comments:<% @user.comments.each do |comment| %>
 <p><%= comment.body %></p>
 <% end %>
+
 
 <%= link_to("Edit profile", edit_user_path(@user)) %><br>
