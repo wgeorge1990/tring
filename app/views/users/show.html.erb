@@ -7,3 +7,5 @@ Comments:<% @user.comments.each do |comment| %>
 <% end %>
 
 <%= link_to("Edit profile", edit_user_path(@user)) %><br>
+
+<%= link_to "See all Citygems", city_gems_path %>
