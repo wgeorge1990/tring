@@ -49,6 +49,10 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
+.landing-page .container, .sign-up-page .container {
+  background-color:rgba(0, 0, 0, 0.8);
+}
+
 .container {
 	max-width: 800px;
 	margin: 0 auto;
@@ -58,7 +62,7 @@
 	border-radius: 5px;
 	box-shadow: 0 5px 50px rgba(0,0,0,0.4);
 	text-align: center;
-  background-color:rgba(0, 0, 0, 0.8);
+  background-color:red;
 }
 
 
