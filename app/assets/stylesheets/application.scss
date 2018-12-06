@@ -62,7 +62,7 @@
 	border-radius: 5px;
 	box-shadow: 0 5px 50px rgba(0,0,0,0.4);
 	text-align: center;
-  background-color:red;
+  background-color:#eee;
 }
 
 
@@ -131,4 +131,23 @@ a.submit, a.submit:hover {
 .selected {
 	color: #665851!important;
 	transition: 0.5s;
+}
+
+ul {
+  padding: 1em 0 3em 0;
+  }
+
+ul, .row {
+  list-style-type: none;
+}
+
+.row li {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+ul li a {
+
+    font-size: 1.5em;
+    line-height: 2em;
 }
