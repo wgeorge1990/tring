@@ -1,19 +1,14 @@
-<h1> <%= @city_gem.name %></h1>
-
-<img src="<%= @city_gem.img_url %>" />
 <div class="container">
+<h1> <%= @city_gem.name %></h1>
+<img src="<%= @city_gem.img_url %>" class="img-fluid" alt="Responsive image" />
+
 <p>Description: <%= @city_gem.description %></p>
 <h3>Category: <%= @city_gem.category.name %></h3>
 <h4>Address: <%= @city_gem.address%></h4>
-<<<<<<< HEAD
-</div>
-=======
-<%= @city_gem.comments %>
 
-
-
-
->>>>>>> de4f89179c1b1f2e7080fd01e374d3470a9077de
+<% @city_gem.comments.each do |comment| %>
+<p><%= comment.body %></p>
+<% end %>
 
 <% pre_like = @city_gem.likes.find { |like| like.user_id == current_user} %>
 <% if pre_like %>
@@ -23,3 +18,17 @@
 <% end %>
 
 <p><%= @city_gem.likes.count %> <%= (@city_gem.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
+<div id="googleMap" style="width:%;height:250px;"></div>
+</div>
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>

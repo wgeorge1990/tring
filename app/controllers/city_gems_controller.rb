@@ -10,6 +10,7 @@ class CityGemsController < ApplicationController
 
   def show
     @city_gem = CityGem.find(params[:id])
+    @comments = Comment.all
   end
 
   def create
