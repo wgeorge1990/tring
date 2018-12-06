@@ -1,10 +1,11 @@
 <h1> <%= @city_gem.name %></h1>
 
 <img src="<%= @city_gem.img_url %>" />
-
+<div class="container">
 <p>Description: <%= @city_gem.description %></p>
 <h3>Category: <%= @city_gem.category.name %></h3>
 <h4>Address: <%= @city_gem.address%></h4>
+</div>
 
 <% pre_like = @city_gem.likes.find { |like| like.user_id == current_user} %>
 <% if pre_like %>
