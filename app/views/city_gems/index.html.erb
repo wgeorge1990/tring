@@ -18,7 +18,7 @@
 <h1> City Gems </h1>
 <div class="row">
 <% @city_gems.each do |city_gem| %>
-<li class="city-gem-item"> <%= link_to city_gem.name, city_gem_path(city_gem) %>
+<li class="city-gem-item"><%= image_tag city_gem.img_url %> <%= link_to city_gem.name, city_gem_path(city_gem) %>
   <p class="likes-count"><%= city_gem.likes.count %> <%= (city_gem.likes.count) == 1 ? 'Like' : 'Likes'%></p>
 </li>
 

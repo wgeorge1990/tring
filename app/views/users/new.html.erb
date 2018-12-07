@@ -20,7 +20,8 @@
         <%= image_tag ( "diamond-158431.svg") %>
     </div>
 
-<h1 class="main-heading"> Sign up </h1>
+<h1 class="main-heading">Welcome to Tring</h1>
+<p>Sign up to join our community, add your own gems and comments.</p>
 
 <%= form_for(@user) do |f| %>
 
@@ -33,7 +34,7 @@
 <%= f.label :email %>
 <%= f.text_field :email %><br>
 
-<%= f.submit %>
+<%= f.submit "Sign Up" %>
 <% end %>
 
 </div>
