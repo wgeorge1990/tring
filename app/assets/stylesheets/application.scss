@@ -183,6 +183,22 @@ ul li a, .row a {
   padding: 0;
   float: none;
   display: block;
-
-
 }
+
+.image-cropper {
+     width: 300px;
+     height: 300px;
+     position: relative;
+     overflow: hidden;
+     border-radius: 50%;
+     margin: 1em auto;
+ }
+
+ .image-cropper img {
+   margin: 0 auto;
+ /* margin-left: -35%; */
+ height: 100%;
+ width: auto;
+ max-width: 100%;
+ max-height: 100%;
+ }
