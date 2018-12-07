@@ -39,6 +39,14 @@
    background-size: cover;
  }
 
+ .landing-page .form-group label
+{
+  color: white;
+  font-weight: bold;
+
+
+}
+
  .sign-up-page .main-heading {
    margin-bottom: 0.5em;
  }
@@ -59,7 +67,7 @@
 }
 
 .landing-page .container, .sign-up-page .container {
-  background-color:rgba(162, 244, 118, 0.8);
+  background-color:rgba(16, 17, 15, 0.74);
 }
 
 .container {
