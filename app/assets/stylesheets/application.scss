@@ -31,12 +31,21 @@
 
  }
 
- .landing-page {
+ .landing-page, .sign-up-page {
    background: url(grant-ritchie-778666-unsplash) no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
+ }
+
+ .sign-up-page .main-heading {
+   margin-bottom: 0.5em;
+ }
+
+ .sign-up-page p {
+   color: #f1f1f1;
+   margin-bottom: 3em;
  }
 
  .top {
@@ -164,4 +173,16 @@ ul li a, .row a {
 .row a:hover {
     color: #333;
     text-decoration: none;
+}
+
+.city-gem-item img {
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  float: none;
+  display: block;
+
+
 }

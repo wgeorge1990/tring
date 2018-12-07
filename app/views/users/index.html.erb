@@ -15,18 +15,15 @@
 <body class="users-page">
 
   <div class="container">
-   <div class="box-header">
 
-
-    <h1 class="main-heading">Users</h1>
-    <ul>
+    <div class="row">
     <% @users.each do |user| %>
-    <li><%= link_to user.name, user_path(user) %></li>
+    <li class="city-gem-item"> <%= link_to user.name, user_path(user) %>
+    </li>
+
     <% end %>
-    </ul>
+    </div><!-- row -->
 
-
-     </div>
     </div><!-- container -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
